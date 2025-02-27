@@ -17,7 +17,7 @@ module.exports = {
         'cd ./src/blocks && npx @wordpress/create-block --no-plugin --template ../../lib/create-block --namespace tktk-blocks',
     },
   },
-  pluginTemplatesPath: join(__dirname, 'templates'),
+  pluginTemplatesPath: join(__dirname, 'plugin-template'),
   blockTemplatesPath: join(__dirname, 'block-templates'),
   // assetsPath: join(__dirname, 'inner-template'),
 };
