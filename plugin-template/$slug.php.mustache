@@ -21,14 +21,16 @@
  * @package           {{namespace}}
  */
 
-function {{namespaceSnakeCase}}_{{slugSnakeCase}}_block_init() {
+function {{namespaceSnakeCase}}_blocks_init() {
 
-	$blocks = array(
-		'{{slug}}/'
-	);
+	define('BLOCKS_BUILD', plugin_dir_path( __FILE__ ) . 'build/blocks/');
+
+	$blocks = array_filter(glob(BLOCKS_BUILD . '*'), 'is_dir');
 
 	foreach ( $blocks as $block ) {
-		register_block_type( plugin_dir_path( __FILE__ ) . 'src/blocks/' . $block);
+		$block_name = str_replace(BLOCKS_BUILD, '', $block);
+		register_block_type( __DIR__ . '/build/blocks/' . $block_name );
 	}
+
 }
 add_action( 'init', '{{namespaceSnakeCase}}_{{slugSnakeCase}}_block_init' );

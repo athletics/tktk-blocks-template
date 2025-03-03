@@ -19,5 +19,4 @@ module.exports = {
   },
   pluginTemplatesPath: join(__dirname, 'plugin-template'),
   blockTemplatesPath: join(__dirname, 'block-templates'),
-  // assetsPath: join(__dirname, 'inner-template'),
 };
