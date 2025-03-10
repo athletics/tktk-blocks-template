@@ -1,15 +1,11 @@
 <?php
 /**
  * Plugin Name:       {{namespace}}
-{{#description}}
- * Description:       {{description}}
-{{/description}}
+ * Description:       A custom blocks starter with tailwind and helper components.
  * Requires at least: 5.8
  * Requires PHP:      7.0
  * Version:           {{version}}
-{{#author}}
- * Author:            {{author}}
-{{/author}}
+ * Author:            Athletics <tech@athleticsnyc.com> (https://athleticsnyc.com)
 {{#license}}
  * License:           {{license}}
 {{/license}}
@@ -21,7 +17,7 @@
  * @package           {{namespace}}
  */
 
-function {{namespaceSnakeCase}}_blocks_init() {
+function {{slugSnakeCase}}_blocks_init() {
 
 	define('BLOCKS_BUILD', plugin_dir_path( __FILE__ ) . 'build/blocks/');
 
@@ -33,4 +29,4 @@ function {{namespaceSnakeCase}}_blocks_init() {
 	}
 
 }
-add_action( 'init', '{{namespaceSnakeCase}}_{{slugSnakeCase}}_block_init' );
+add_action( 'init', '{{slugSnakeCase}}_blocks_init' );
